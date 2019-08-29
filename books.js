@@ -26,7 +26,7 @@ var drawShelf = function(){
 
 var drawStars = function(){
     var i = 0;
-    image(getImage("cute/Star"), 20, 80, 20, 40);
+    image(getImage("cute/Star"), i * 20, 80, 20, 40);
 };
 
 drawShelf();
@@ -43,3 +43,5 @@ for(var i = 0; i < book.length; i++){
 for(var i = 0; i < book.length; i++){
     drawStars();
 }
+
+
