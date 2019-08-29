@@ -24,9 +24,10 @@ var drawShelf = function(){
     rect(0, 120, 400, 10);
 };
 
-var drawStars = function(){
-    var i = 0;
-    image(getImage("cute/Star"), i * 20, 80, 20, 40);
+var drawStars = function(xPosition){
+    var xPosition = 10;
+    image(getImage("cute/Star"), xPosition, 80, 20, 40
+    );
 };
 
 drawShelf();
@@ -37,11 +38,14 @@ for(var i = 0; i < book.length; i++){
     fill(0, 0, 0);
     text(book[i].title, i * 100 + 10, 29, 70, 100);
     text(book[i].author, i* 100 + 10, 80, 70, 100);
-    
+        for (var k = 0; k < book[i].stars; k++) {
+            image(getImage("cute/Star"), 
+            13 + k * 15 + i*140, 
+            90, 
+            20, 
+            30);
+        }
 }
 
-for(var i = 0; i < book.length; i++){
-    drawStars();
-}
 
 
