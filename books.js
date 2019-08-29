@@ -19,10 +19,17 @@ var book = [
     }
 ];
 
-// draw shelf
-fill(173, 117, 33);
-rect(0, 120, width, 10);
+var drawShelf = function(){
+    fill(173, 117, 33);
+    rect(0, 120, 400, 10);
+};
 
+var drawStars = function(){
+    var i = 0;
+    image(getImage("cute/Star"), 20, 80, 20, 40);
+};
+
+drawShelf();
 
 for(var i = 0; i < book.length; i++){
     fill(book[i].color);
@@ -30,11 +37,9 @@ for(var i = 0; i < book.length; i++){
     fill(0, 0, 0);
     text(book[i].title, i * 100 + 10, 29, 70, 100);
     text(book[i].author, i* 100 + 10, 80, 70, 100);
+    
 }
 
-
-for (var i = 0; i < book.length; i++) {
-    image(getImage("cute/Star"), 13 + i * 20, 90, 20, 30);
+for(var i = 0; i < book.length; i++){
+    drawStars();
 }
-
-
