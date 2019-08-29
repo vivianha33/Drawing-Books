@@ -40,7 +40,7 @@ for(var i = 0; i < book.length; i++){
     text(book[i].author, i* 100 + 10, 80, 70, 100);
         for (var k = 0; k < book[i].stars; k++) {
             image(getImage("cute/Star"), 
-            13 + k * 15 + i*140, 
+            k * 15 + i*90+20, 
             90, 
             20, 
             30);
